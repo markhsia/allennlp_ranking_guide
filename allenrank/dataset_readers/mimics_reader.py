@@ -38,7 +38,7 @@ class MIMICSDatasetReader(DatasetReader):
         
 
     @overrides
-    def _read(self, file_path: str):
+    def _read(self, file_path: str)-> Iterable[Instance]:
         logger.info("Reading instances from lines in file at: %s", file_path)
 
         df = pd.read_csv(cached_path(file_path), sep='\t')
