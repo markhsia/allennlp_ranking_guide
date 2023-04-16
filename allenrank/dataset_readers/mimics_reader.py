@@ -4,8 +4,12 @@ import logging
 
 from overrides import overrides
 
+
+from typing import Dict, Iterable, List
+
+from allennlp.data import DatasetReader, Instance
+
 from allennlp.common.file_utils import cached_path
-from allennlp.data.dataset_readers.dataset_reader import DatasetReader
 from allennlp.data.fields import LabelField, TextField, Field, ListField, ArrayField
 from allennlp.data.instance import Instance
 from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
